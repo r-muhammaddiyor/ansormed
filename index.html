@@ -13,6 +13,18 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:300' rel='stylesheet'>
+    <style>
+        .burger-menu {
+            transform: translateY(-100%);
+            z-index: 2;
+            height: 100vh;
+        }
+
+        #bars:checked + .burger-menu {
+            transform: translateY(0);
+        }
+
+    </style>
 </head>
 <body>
     <!-- header -->
@@ -42,7 +54,7 @@
             </label>
             <input type="checkbox" name="burger-menu" id="bars" class="hidden">   
             
-            <div class="burger-menu w-[300px] flex lg:hidden flex-col justify-center gap-[50px] items-center bg-red-100 absolute top-[0] right-[0] transform translate-y-[-100%] h-full">
+            <div class="burger-menu w-[300px] flex lg:hidden flex-col justify-center gap-[50px] items-center bg-red-100 absolute top-[0] right-[0]">
                 <a href="#" data-aos="fade-up" data-aos-duration="1000" class="header-link">Xizmatlar</a>
                 <a href="#" data-aos="fade-up"  data-aos-duration="1000" class="header-link">Dorilar</a>
                 <a href="#" data-aos="fade-up" data-aos-duration="1000" class="header-link">Asal</a>
